@@ -1,7 +1,8 @@
 import { Drawer as MuiDrawer } from '@mui/material';
+import { DrawerContent } from './DrawerContent';
 import { DrawerProps } from './types';
 
-export const Drawer = ({ drawerWidth = 250 }: DrawerProps) => {
+export const Drawer = ({ drawerWidth }: DrawerProps) => {
   return (
     <MuiDrawer
       variant="permanent"
@@ -11,10 +12,7 @@ export const Drawer = ({ drawerWidth = 250 }: DrawerProps) => {
       }}
       open
     >
-      MUI Drawer | Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Cupiditate tenetur obcaecati beatae officia, repellendus quisquam vel
-      dignissimos velit aperiam placeat nobis, nam maxime ad dolore molestiae,
-      dolorem reiciendis voluptatum consequatur!
+      <DrawerContent />
     </MuiDrawer>
   );
 };

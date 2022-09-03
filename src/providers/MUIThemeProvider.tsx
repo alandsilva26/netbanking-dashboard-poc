@@ -3,6 +3,13 @@ import { red } from '@mui/material/colors';
 
 const theme = createTheme({
   components: {
+    MuiFormLabel: {
+      styleOverrides: {
+        asterisk: {
+          color: 'red',
+        },
+      },
+    },
     MuiTextField: {
       defaultProps: {
         fullWidth: true,
@@ -11,11 +18,6 @@ const theme = createTheme({
         size: 'small',
         InputLabelProps: {
           shrink: true,
-          sx: {
-            '.MuiFormLabel-asterix': {
-              color: red,
-            },
-          },
           style: {
             position: 'relative',
             transform: 'translate(0px, 0px)',
@@ -33,6 +35,16 @@ const theme = createTheme({
             marginBottom: '1em',
           }),
         }),
+      },
+    },
+    MuiAppBar: {
+      defaultProps: {
+        elevation: 0,
+      },
+    },
+    MuiToolbar: {
+      defaultProps: {
+        disableGutters: true,
       },
     },
   },

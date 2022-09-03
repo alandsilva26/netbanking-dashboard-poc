@@ -1,4 +1,5 @@
 import { Drawer as MuiDrawer } from '@mui/material';
+import { DrawerContent } from './DrawerContent';
 import { DrawerProps } from './types';
 
 interface MobileDrawerProps extends DrawerProps {
@@ -6,6 +7,10 @@ interface MobileDrawerProps extends DrawerProps {
   handleDrawerToggle(): void;
 }
 
+/**
+ *
+ * MObile drawer wrapper. No content only wrapper.
+ */
 export const MobileDrawer = ({
   mobileOpen = false,
   handleDrawerToggle,
@@ -29,9 +34,7 @@ export const MobileDrawer = ({
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam ullam
-        earum quidem iure. Aliquid, rerum nihil veniam iste similique explicabo
-        cum nisi ratione, odit suscipit reiciendis, placeat libero quas aperiam?
+        <DrawerContent />
       </MuiDrawer>
     </>
   );

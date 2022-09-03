@@ -7,29 +7,53 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
+import { AppIcon } from 'components/misc/AppIcon';
 
 export const ManagerLogin = () => {
   return (
     <>
-      <Container>
-        <Box sx={{ maxWidth: '500px', margin: '0 auto' }}>
+      <Container
+        sx={{
+          height: 'calc(100vh - 100px)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
+        <Box
+          sx={{
+            maxWidth: '400px',
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 1,
+          }}
+        >
+          <Box>
+            <AppIcon height="80px" />
+          </Box>
+          <Typography variant="h5" marginBottom={1}>
+            Sign in to your account
+          </Typography>
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
-              <Typography variant="h4" marginBottom={1}>
-                Sign in
-              </Typography>
               <form>
                 <TextField
-                  label="Email"
+                  label="Manager Email"
                   placeholder="John.Doe@lemon.com"
                   required
                 />
                 <TextField label="Password" type="password" required />
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                  <Button variant="contained" color="primary">
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                  >
                     Sign in
                   </Button>
-                  <Button variant="outlined">Cancel</Button>
                 </Box>
               </form>
             </CardContent>
