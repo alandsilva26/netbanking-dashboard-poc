@@ -12,17 +12,16 @@ interface AppBarProps extends MuiAppBarProps {
   drawerWidth: number;
 }
 
-const AppBar = styled(MuiAppBar, {
+const AppBarStyled = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open, drawerWidth }) => ({
   // transition: theme.transitions.create(['margin', 'width'], {
   //   easing: theme.transitions.easing.sharp,
   //   duration: theme.transitions.duration.leavingScreen,
   // }),
-  position: 'relative',
-  border: 'none',
+  // width: `calc(100vw - ${drawerWidth}px)`,
+  background: 'white',
   borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
-  background: 'green',
   // marginLeft: `-${drawerWidth}px`,
   // width: '100%',
   // ...(open && {
@@ -45,22 +44,23 @@ interface HeaderProps extends ToolbarProps {
 
 export const Header = ({
   open,
-  drawerWidth = 0,
+  drawerWidth = 250,
   variant = 'dense',
   handleMenuClick,
 }: HeaderProps) => {
   return (
     <>
-      <AppBar
+      <AppBarStyled
         color="transparent"
         variant="outlined"
+        position="relative"
         drawerWidth={drawerWidth}
         open={open}
       >
         <Toolbar variant={variant}>
           <Button onClick={handleMenuClick}>Test</Button>Navbar
         </Toolbar>
-      </AppBar>
+      </AppBarStyled>
     </>
   );
 };

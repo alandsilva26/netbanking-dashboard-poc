@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material';
-import { green, red } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 
 const theme = createTheme({
   components: {
@@ -8,32 +8,31 @@ const theme = createTheme({
         fullWidth: true,
         margin: 'none',
         variant: 'outlined',
+        size: 'small',
         InputLabelProps: {
-          shrink: false,
-          style: {
-            marginBottom: '0.5em',
+          shrink: true,
+          sx: {
+            '.MuiFormLabel-asterix': {
+              color: red,
+            },
           },
+          style: {
+            position: 'relative',
+            transform: 'translate(0px, 0px)',
+            marginBottom: '0.1em',
+            fontWeight: '600',
+          },
+        },
+        InputProps: {
+          notched: false,
         },
       },
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.margin === 'none' && {
-            margin: '0.5em 0px',
+            marginBottom: '1em',
           }),
         }),
-      },
-    },
-    MuiInputLabel: {
-      styleOverrides: {
-        root: {
-          position: 'relative',
-          transform: 'translate(0px, 0px)',
-        },
-      },
-    },
-    MuiOutlinedInput: {
-      defaultProps: {
-        notched: false,
       },
     },
   },
