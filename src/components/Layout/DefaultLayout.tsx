@@ -1,8 +1,10 @@
-import { Box, Toolbar } from '@mui/material';
 import { useState } from 'react';
-import { Main } from '../elements/Main/Main';
-import { Header } from './Header';
-import { SideDrawer } from './SideDrawer';
+import { Box } from '@mui/material';
+
+// custom components
+import { Drawer, MobileDrawer } from 'components/Drawer';
+import { MainContent } from 'components/mui/styled';
+import { AppBar } from 'components/AppBar';
 
 interface DefaultLayoutProps {
   children: React.ReactNode;
@@ -10,7 +12,7 @@ interface DefaultLayoutProps {
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const drawerWidth = 250;
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleDrawer = () => {
     setOpen((prev) => !prev);
@@ -18,7 +20,13 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
 
   return (
     <>
-      <Box sx={{ display: 'flex' }}>{children}</Box>
+      <MobileDrawer mobileOpen={open} handleDrawerToggle={handleDrawer} />
+      <Drawer drawerWidth={250} />
+      <MainContent drawerWidth={drawerWidth}>
+        <AppBar open={open} handleMenuClick={handleDrawer} />
+        <Box sx={{ flexGrow: 1 }}>{children}</Box>
+        <Box></Box>
+      </MainContent>
     </>
   );
 };
