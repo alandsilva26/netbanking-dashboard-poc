@@ -16,6 +16,7 @@ const theme = createTheme({
         margin: 'none',
         variant: 'outlined',
         size: 'small',
+        required: true,
         InputLabelProps: {
           shrink: true,
           style: {

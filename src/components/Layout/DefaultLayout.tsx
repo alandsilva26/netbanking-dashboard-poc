@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 // custom components
 import { Drawer, MobileDrawer } from 'components/Drawer';
@@ -25,7 +26,9 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <MainContent drawerWidth={drawerWidth}>
         <AppBar open={open} handleMenuClick={handleDrawer} />
         <Box sx={{ flexGrow: 1 }}>{children}</Box>
-        <Box></Box>
+        <Box>
+          <Link to="/admin/signin">Admin Panel</Link>
+        </Box>
       </MainContent>
     </>
   );

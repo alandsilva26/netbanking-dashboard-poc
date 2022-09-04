@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { AppIcon } from 'components/misc/AppIcon';
 
-export const ManagerLogin = () => {
+export const CustomerLogin = () => {
   return (
     <>
       <Container
@@ -34,17 +34,13 @@ export const ManagerLogin = () => {
             <AppIcon height="80px" />
           </Box>
           <Typography variant="h5" marginBottom={1}>
-            Sign in to Admin Panel
+            Sign in to your account
           </Typography>
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
               <form>
-                <TextField
-                  label="Manager Email"
-                  placeholder="John.Doe@lemon.com"
-                  required
-                />
-                <TextField label="Password" type="password" required />
+                <TextField label="Customer id" placeholder="" required />
+                <TextField label="Pin" type="password" required />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button
                     type="submit"
