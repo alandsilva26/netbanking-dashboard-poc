@@ -4,7 +4,8 @@ import { DefaultLayout } from 'components';
 // routes
 import { dummyRoutes } from 'features/dummy/routes';
 import { authRoutes } from 'features/auth';
-import { createCustomerRoute } from 'features/customers';
+import { managerRoutes } from './protectedManagerRoutes';
+import { protectedRoutes } from './protectedRoutes';
 
 const DefaultApp = () => {
   return (
@@ -21,8 +22,9 @@ export const AppRoutes = () => {
     {
       path: '/',
       element: <DefaultApp />,
-      children: [...dummyRoutes, ...authRoutes, createCustomerRoute],
+      children: [...dummyRoutes, protectedRoutes, managerRoutes],
     },
+    ...authRoutes,
   ];
 
   const elements = useRoutes([...defaultRoutes]);

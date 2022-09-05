@@ -3,7 +3,7 @@ import { HelloWorld } from 'components/Temp/HelloWorld';
 
 export const dummyRoutes: RouteObject[] = [
   {
-    path: '/',
+    path: '/dummy',
     element: <HelloWorld />,
   },
 ];

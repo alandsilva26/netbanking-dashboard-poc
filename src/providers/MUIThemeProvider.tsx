@@ -13,7 +13,7 @@ const theme = createTheme({
     MuiTextField: {
       defaultProps: {
         fullWidth: true,
-        margin: 'none',
+        margin: 'dense',
         variant: 'outlined',
         size: 'small',
         required: true,
@@ -24,16 +24,24 @@ const theme = createTheme({
             transform: 'translate(0px, 0px)',
             marginBottom: '0.1em',
             fontWeight: '600',
+            fontSize: '14px',
           },
         },
         InputProps: {
           notched: false,
+          style: {
+            background: 'whitesmoke',
+          },
         },
       },
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.margin === 'none' && {
             marginBottom: '1em',
+          }),
+          ...(ownerState.margin === 'dense' && {
+            marginTop: '0px',
+            marginBottom: '0.5em',
           }),
         }),
       },

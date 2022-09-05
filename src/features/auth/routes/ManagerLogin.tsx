@@ -42,9 +42,9 @@ export const ManagerLogin = () => {
                 <TextField
                   label="Manager Email"
                   placeholder="John.Doe@lemon.com"
-                  required
+                  margin="normal"
                 />
-                <TextField label="Password" type="password" required />
+                <TextField label="Password" type="password" margin="normal" />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button
                     type="submit"

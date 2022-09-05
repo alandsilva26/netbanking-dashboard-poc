@@ -1,25 +1,41 @@
-import { Box, Container, TextField, Typography } from '@mui/material';
-import { FlexBox } from 'components/elements/FlexBox/FlexBox';
+import { Button, Container, TextField, Typography } from '@mui/material';
+
+// custome components
+import { FormGroup } from 'components/form/FormGroup';
+import { FlexBox, DatePicker } from 'components/elements';
+import { PageLayout } from 'components/Layout/PageLayout';
 
 export const CreateCustomerPage = () => {
   return (
     <>
-      <Container>
-        <Typography variant="h5" gutterBottom>
-          Add new Customer
-        </Typography>
+      <PageLayout title="Add a new Customer">
         <form>
-          <Box sx={{ width: '50%' }}>
+          <FormGroup title="Personal Details">
             <FlexBox gap={1}>
-              <TextField label="First name" />
-              <TextField label="Last name" />
+              <TextField label="First name" fullWidth={false} />
+              <TextField label="Last name" fullWidth={false} />
             </FlexBox>
-
-            <TextField label="Email" />
-          </Box>
-          <TextField label="Address" />
+            <FlexBox>
+              <TextField
+                label="Email"
+                placeholder="Enter personal email"
+                fullWidth={false}
+              />
+              <DatePicker />
+            </FlexBox>
+          </FormGroup>
+          <FormGroup title="Address">
+            <TextField label="Address line 1" />
+            <TextField label="Address line 2" required={false} />
+            <FlexBox>
+              <TextField label="City" />
+              <TextField label="State" />
+              <TextField label="Pin" />
+            </FlexBox>
+          </FormGroup>
+          <Button variant="contained">Create Customer</Button>
         </form>
-      </Container>
+      </PageLayout>
     </>
   );
 };
