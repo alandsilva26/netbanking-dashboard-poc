@@ -1,13 +1,10 @@
 import { Typography } from '@mui/material';
+import { PageLayout } from 'components/Layout/PageLayout';
 
 /**
  *
  * Default dashboard
  */
 export const Home = () => {
-  return (
-    <>
-      <Typography variant="h1">Welcome User</Typography>
-    </>
-  );
+  return <PageLayout title="Welcome User"></PageLayout>;
 };

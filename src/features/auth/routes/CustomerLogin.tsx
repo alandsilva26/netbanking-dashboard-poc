@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import { AppIcon } from 'components/misc/AppIcon';
+import { StyledTextField } from 'components';
 
 export const CustomerLogin = () => {
   return (
@@ -39,8 +40,8 @@ export const CustomerLogin = () => {
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
               <form>
-                <TextField label="Customer id" placeholder="" required />
-                <TextField label="Pin" type="password" required />
+                <StyledTextField label="Customer id" placeholder="" required />
+                <StyledTextField label="Pin" type="password" margin="normal" />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button
                     type="submit"

@@ -7,6 +7,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
+import { StyledTextField } from 'components';
 import { AppIcon } from 'components/misc/AppIcon';
 
 export const ManagerLogin = () => {
@@ -39,12 +40,15 @@ export const ManagerLogin = () => {
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
               <form>
-                <TextField
+                <StyledTextField
                   label="Manager Email"
                   placeholder="John.Doe@lemon.com"
+                />
+                <StyledTextField
+                  label="Password"
+                  type="password"
                   margin="normal"
                 />
-                <TextField label="Password" type="password" margin="normal" />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button
                     type="submit"

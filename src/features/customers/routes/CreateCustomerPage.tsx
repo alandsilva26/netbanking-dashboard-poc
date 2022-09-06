@@ -1,6 +1,7 @@
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
 
 // custome components
+import { StyledTextField } from 'components';
 import { FormGroup } from 'components/form/FormGroup';
 import { FlexBox, DatePicker } from 'components/elements';
 import { PageLayout } from 'components/Layout/PageLayout';
@@ -12,11 +13,11 @@ export const CreateCustomerPage = () => {
         <form>
           <FormGroup title="Personal Details">
             <FlexBox gap={1}>
-              <TextField label="First name" fullWidth={false} />
-              <TextField label="Last name" fullWidth={false} />
+              <StyledTextField label="First name" fullWidth={false} />
+              <StyledTextField label="Last name" fullWidth={false} />
             </FlexBox>
             <FlexBox>
-              <TextField
+              <StyledTextField
                 label="Email"
                 placeholder="Enter personal email"
                 fullWidth={false}
@@ -25,12 +26,12 @@ export const CreateCustomerPage = () => {
             </FlexBox>
           </FormGroup>
           <FormGroup title="Address">
-            <TextField label="Address line 1" />
-            <TextField label="Address line 2" required={false} />
+            <StyledTextField label="Address line 1" />
+            <StyledTextField label="Address line 2" required={false} />
             <FlexBox>
-              <TextField label="City" />
-              <TextField label="State" />
-              <TextField label="Pin" />
+              <StyledTextField label="City" />
+              <StyledTextField label="State" />
+              <StyledTextField label="Pin" />
             </FlexBox>
           </FormGroup>
           <Button variant="contained">Create Customer</Button>

@@ -4,16 +4,19 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider, MUIThemeProvider } from 'providers';
 import { AppRoutes } from './routes/index';
 
+// css
+import 'assets/fonts/fonts.css';
+
 const App = () => {
   return (
     <>
       <AuthProvider>
         <BrowserRouter>
-          <CssBaseline>
-            <MUIThemeProvider>
+          <MUIThemeProvider>
+            <CssBaseline>
               <AppRoutes />
-            </MUIThemeProvider>
-          </CssBaseline>
+            </CssBaseline>
+          </MUIThemeProvider>
         </BrowserRouter>
       </AuthProvider>
     </>

@@ -7,7 +7,7 @@ interface PageLayoutProps {
 
 export const PageLayout = ({ title, children = null }: PageLayoutProps) => {
   return (
-    <Container>
+    <Container sx={{ marginTop: 2 }}>
       <Typography variant="h5" fontWeight="540" marginBottom={2}>
         {title}
       </Typography>
