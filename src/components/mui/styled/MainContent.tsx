@@ -18,7 +18,7 @@ export const MainContent = styled(Box, {
   flexDirection: 'column',
   [theme.breakpoints.up('sm')]: {
     marginLeft: `${drawerWidth}px`,
-    width: `calc(100vw - ${drawerWidth}px)`,
+    maxWidth: `calc(100vw - ${drawerWidth}px)`,
   },
   transition: theme.transitions.create(['margin', 'width', 'background'], {
     easing: theme.transitions.easing.sharp,

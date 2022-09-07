@@ -3,6 +3,7 @@ import { useAuth } from 'providers';
 
 // routes
 import { createCustomerRoute } from 'features/customers';
+import { accountCreateRoute } from 'features/accounts';
 
 const AdminApp = () => {
   const auth = useAuth();
@@ -16,5 +17,5 @@ const AdminApp = () => {
 export const managerRoutes: RouteObject = {
   path: '',
   element: <AdminApp />,
-  children: [createCustomerRoute],
+  children: [createCustomerRoute, accountCreateRoute],
 };

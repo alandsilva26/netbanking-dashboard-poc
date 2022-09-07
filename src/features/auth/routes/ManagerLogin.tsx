@@ -43,11 +43,13 @@ export const ManagerLogin = () => {
                 <StyledTextField
                   label="Manager Email"
                   placeholder="John.Doe@lemon.com"
+                  fullWidth
                 />
                 <StyledTextField
                   label="Password"
                   type="password"
                   margin="normal"
+                  fullWidth
                 />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button

@@ -2,6 +2,7 @@ import { RouteObject, Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from 'providers';
 import { homeRoute } from 'features/misc';
 import { customerListRoute } from 'features/customers';
+import { accountListRoute } from 'features/accounts/routes';
 
 const ProtectedApp = () => {
   const auth = useAuth();
@@ -19,5 +20,5 @@ const ProtectedApp = () => {
 export const protectedRoutes: RouteObject = {
   path: '/',
   element: <ProtectedApp />,
-  children: [homeRoute, customerListRoute],
+  children: [homeRoute, customerListRoute, accountListRoute],
 };

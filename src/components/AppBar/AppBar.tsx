@@ -1,4 +1,5 @@
 import {
+  Box,
   AppBar as MuiAppBar,
   AppBarProps as MuiAppBarProps,
   ToolbarProps,
@@ -17,7 +18,6 @@ export const AppBarStyled = styled(MuiAppBar, {
 })(({ theme }) => ({
   borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
   padding: '0 10px',
-  marginBottom: theme.spacing(1),
 }));
 
 interface HeaderProps extends ToolbarProps {
@@ -40,6 +40,12 @@ export const AppBar = ({
         >
           Open Sidebar
         </Button>
+
+        <Box sx={{ marginLeft: 'auto' }}>
+          <Button variant="text" color="error" size="small">
+            Logout
+          </Button>
+        </Box>
       </Toolbar>
     </AppBarStyled>
   );

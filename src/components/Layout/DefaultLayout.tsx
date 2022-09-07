@@ -25,10 +25,10 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <Drawer drawerWidth={250} />
       <MainContent drawerWidth={drawerWidth}>
         <AppBar open={open} handleMenuClick={handleDrawer} />
-        <Box sx={{ flexGrow: 1 }}>{children}</Box>
-        <Box>
+        <Box sx={{ flexGrow: 1, paddingTop: 3 }}>{children}</Box>
+        {/* <Box>
           <Link to="/admin/signin">Admin Panel</Link>
-        </Box>
+        </Box> */}
       </MainContent>
     </>
   );

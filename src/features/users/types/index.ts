@@ -1,5 +1,5 @@
 export interface IUser {
-  name?: 'String';
+  name?: string;
   email?: string;
   role: 'customer' | 'manager';
 }

@@ -1,29 +1,38 @@
 import { Box, Divider, Typography } from '@mui/material';
 
 import { FlexBox } from 'components/elements/FlexBox/FlexBox';
+import { TypePredicateKind } from 'typescript';
 
 interface FormGroupProps {
   title: string;
-  children: React.ReactNode;
+  description?: string;
+  children?: React.ReactNode;
 }
 
-export const FormGroup = ({ title, children = null }: FormGroupProps) => {
+export const FormGroup = ({
+  title,
+  description,
+  children = null,
+}: FormGroupProps) => {
   return (
-    <Box>
-      <FlexBox alignItems="center" gap={1} marginBottom={2}>
-        <Typography fontWeight="600" color="primary">
-          {title}
-        </Typography>
-        <Box
-          sx={{
-            backgroundColor: 'primary.main',
-            opacity: '0.6',
-            flexGrow: '1',
-            height: '1px',
-          }}
-        ></Box>
-      </FlexBox>
-      <Box marginX={0}>{children}</Box>
+    <Box marginBottom={2} sx={{}}>
+      <Box marginBottom={1}>
+        <FlexBox alignItems="center" gap={1}>
+          <Typography fontWeight="600" color="primary">
+            {title}
+          </Typography>
+          <Box
+            sx={{
+              backgroundColor: 'primary.main',
+              opacity: '0.6',
+              flexGrow: '1',
+              height: '1px',
+            }}
+          ></Box>
+        </FlexBox>
+        {description && <Typography variant="body2">{description}</Typography>}
+      </Box>
+      <Box>{children}</Box>
     </Box>
   );
 };

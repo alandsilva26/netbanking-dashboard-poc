@@ -6,6 +6,7 @@ import { dummyRoutes } from 'features/dummy/routes';
 import { authRoutes } from 'features/auth';
 import { managerRoutes } from './protectedManagerRoutes';
 import { protectedRoutes } from './protectedRoutes';
+import { notFoundRoute } from 'features/misc';
 
 const DefaultApp = () => {
   return (
@@ -25,6 +26,7 @@ export const AppRoutes = () => {
       children: [...dummyRoutes, protectedRoutes, managerRoutes],
     },
     ...authRoutes,
+    notFoundRoute,
   ];
 
   const elements = useRoutes([...defaultRoutes]);

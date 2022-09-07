@@ -23,6 +23,7 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const DUMMY_MANAGER: IManager = {
+    name: 'Alan Dsilva',
     email: 'alan.dsilva@lemon.com',
     role: 'manager',
   };

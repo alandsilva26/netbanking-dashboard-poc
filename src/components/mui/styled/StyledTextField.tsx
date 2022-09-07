@@ -5,7 +5,7 @@ const test = createTheme();
 export const StyledTextField = styled(
   TextField,
   {}
-)(({ theme, margin }) => ({
+)(({ theme, margin, disabled }) => ({
   ...(margin === 'dense' && {
     marginTop: '0em',
     marginBottom: '0.5em',
@@ -14,10 +14,18 @@ export const StyledTextField = styled(
     marginTop: '0em',
     marginBottom: '1.5em',
   }),
+  ...(disabled === true && {
+    '.MuiInputBase-root': {
+      background: 'whitesmoke !important',
+    },
+    '.MuiInputBase-input': {
+      color: 'black !important',
+      textFillColor: 'rgb(0 0 0 / 80%)',
+    },
+  }),
 }));
 
 StyledTextField.defaultProps = {
-  fullWidth: true,
   size: 'small',
   required: true,
   margin: 'dense',
@@ -34,7 +42,7 @@ StyledTextField.defaultProps = {
   InputProps: {
     notched: false,
     style: {
-      backgroundColor: 'whitesmoke',
+      backgroundColor: 'hsl(0deg 0% 93% / 0%)',
     },
   },
 };

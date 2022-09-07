@@ -1,6 +1,9 @@
-import { Toolbar, List, ListItem } from '@mui/material';
+import { Toolbar, List, ListItem, Link as MuiLink } from '@mui/material';
 import { AppBarStyled, Brand } from 'components/AppBar';
 import { Link } from 'react-router-dom';
+
+// routes
+import { ACCOUNT_CREATE_ROUTE } from 'features/accounts';
 
 /**
  * Common drawer content for desktop and mobile drawers.
@@ -19,15 +22,20 @@ export const DrawerContent = () => {
       </AppBarStyled>
       <>
         <List>
-          {['/admin/signin', '/signin', 'customer/new', 'customers'].map(
-            (route, index) => {
-              return (
-                <ListItem key={index}>
-                  <Link to={route}>{route}</Link>
-                </ListItem>
-              );
-            }
-          )}
+          {[
+            '/signin',
+            '/admin/signin',
+            'customers',
+            'customer/new',
+            'accounts',
+            ACCOUNT_CREATE_ROUTE,
+          ].map((route, index) => {
+            return (
+              <ListItem key={index}>
+                <Link to={route}>{route}</Link>
+              </ListItem>
+            );
+          })}
         </List>
       </>
     </>

@@ -40,8 +40,18 @@ export const CustomerLogin = () => {
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
               <form>
-                <StyledTextField label="Customer id" placeholder="" required />
-                <StyledTextField label="Pin" type="password" margin="normal" />
+                <StyledTextField
+                  label="Customer id"
+                  placeholder=""
+                  required
+                  fullWidth
+                />
+                <StyledTextField
+                  label="Pin"
+                  type="password"
+                  margin="normal"
+                  fullWidth
+                />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <Button
                     type="submit"
