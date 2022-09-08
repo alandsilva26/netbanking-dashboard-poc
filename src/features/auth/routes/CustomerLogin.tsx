@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -8,9 +9,21 @@ import {
   Typography,
 } from '@mui/material';
 import { AppIcon } from 'components/misc/AppIcon';
-import { StyledTextField } from 'components';
+
+// custom
+import { StyledTextField } from 'components/mui/styled';
+import { useAuthForm } from '../hooks/useAuthForm';
+
+interface CustomerLoginFormState {
+  customerId: string;
+  password: string;
+}
 
 export const CustomerLogin = () => {
+  const { formState, handleInputChange, handleSubmit } = useAuthForm();
+
+  const handleChange = handleInputChange;
+
   return (
     <>
       <Container
@@ -39,16 +52,20 @@ export const CustomerLogin = () => {
           </Typography>
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <StyledTextField
+                  name="id"
                   label="Customer id"
-                  placeholder=""
-                  required
+                  value={formState.id}
+                  onChange={handleChange}
                   fullWidth
                 />
                 <StyledTextField
+                  name="password"
                   label="Pin"
                   type="password"
+                  value={formState.password}
+                  onChange={handleChange}
                   margin="normal"
                   fullWidth
                 />

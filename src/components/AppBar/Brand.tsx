@@ -7,7 +7,10 @@ interface BrandProps {
   onlyIcon?: boolean;
 }
 
-export const Brand = ({ title = 'Tech', onlyIcon = false }: BrandProps) => {
+export const Brand = ({
+  title = 'Tech Ltd.',
+  onlyIcon = false,
+}: BrandProps) => {
   return (
     <MUILink component={RouterLink} to="/" underline="none">
       <Box

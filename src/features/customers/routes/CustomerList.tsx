@@ -10,6 +10,7 @@ export const CustomerList = () => {
     {
       field: 'email',
       headerName: 'Email',
+      minWidth: 200,
       flex: 1,
     },
     {
@@ -52,19 +53,20 @@ export const CustomerList = () => {
 
   return (
     <PageLayout title="Customers">
-      <div style={{ height: '500px', width: '100%' }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          density="compact"
-          pageSize={100}
-          disableDensitySelector={false}
-          // autoPageSize={true}
-          // rowsPerPageOptions={[10, 20, 30]}
-          rowsPerPageOptions={[100]}
-          checkboxSelection={false}
-        />
-      </div>
+      {/* <div style={{ height: '500px', width: '100%' }}> */}
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        density="compact"
+        pageSize={100}
+        disableDensitySelector={false}
+        // autoPageSize={true}
+        // rowsPerPageOptions={[10, 20, 30]}
+        rowsPerPageOptions={[100]}
+        checkboxSelection={false}
+        sx={{ minHeight: '500px' }}
+      />
+      {/* </div> */}
     </PageLayout>
   );
 };

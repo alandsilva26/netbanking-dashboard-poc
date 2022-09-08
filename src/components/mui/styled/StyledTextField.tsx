@@ -42,7 +42,7 @@ StyledTextField.defaultProps = {
   InputProps: {
     notched: false,
     style: {
-      backgroundColor: 'hsl(0deg 0% 93% / 0%)',
+      backgroundColor: 'hsl(0deg 0% 93% / 20%)',
     },
   },
 };

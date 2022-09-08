@@ -12,7 +12,7 @@ export const PageLayout = ({
 }: PageLayoutProps) => {
   return (
     <Container sx={{ marginBottom: 2 }} {...rest}>
-      <Typography variant="h5" fontWeight="540" marginBottom={2}>
+      <Typography variant="h5" fontWeight="600" marginBottom={2}>
         {title}
       </Typography>
       <>{children}</>

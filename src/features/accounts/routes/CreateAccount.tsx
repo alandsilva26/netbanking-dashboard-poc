@@ -9,10 +9,12 @@ import {
   ToggleButton,
   Typography,
 } from '@mui/material';
-import { StyledTextField } from 'components';
+
+// custom
 import { FlexBox } from 'components/elements';
-import { FormGroup } from 'components/form/FormGroup';
-import { PageLayout } from 'components/Layout/PageLayout';
+import { FormGroup } from 'components/form';
+import { PageLayout } from 'components/Layout';
+import { StyledTextField } from 'components/mui/styled';
 import HorizontalLinearStepper from '../components/StepperDemo';
 
 export const CreateAccount = () => {

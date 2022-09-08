@@ -11,6 +11,17 @@ const theme = createTheme({
   },
   components: {
     MuiCssBaseline: {},
+
+    MuiCard: {
+      defaultProps: {
+        variant: 'outlined',
+      },
+      styleOverrides: {
+        root: {
+          borderRadius: '0.5em',
+        },
+      },
+    },
     MuiFormLabel: {
       styleOverrides: {
         asterisk: {

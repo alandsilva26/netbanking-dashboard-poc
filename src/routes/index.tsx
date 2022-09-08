@@ -1,9 +1,11 @@
 import { useRoutes, RouteObject, Outlet } from 'react-router-dom';
-import { DefaultLayout } from 'components';
+
+// layout
+import { DefaultLayout } from 'components/Layout';
 
 // routes
 import { dummyRoutes } from 'features/dummy/routes';
-import { authRoutes } from 'features/auth';
+import { authRoutes, logoutRoute } from 'features/auth';
 import { managerRoutes } from './protectedManagerRoutes';
 import { protectedRoutes } from './protectedRoutes';
 import { notFoundRoute } from 'features/misc';

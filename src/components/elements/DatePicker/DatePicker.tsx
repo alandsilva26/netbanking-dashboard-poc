@@ -39,7 +39,7 @@ export const DatePicker = () => {
               onClick={props.onClick}
               onChange={props.onChange}
               endAdornment={props.InputProps?.endAdornment}
-              sx={{ background: 'whitesmoke' }}
+              // sx={{ background: 'whitesmoke' }}
             />
           )}
         />

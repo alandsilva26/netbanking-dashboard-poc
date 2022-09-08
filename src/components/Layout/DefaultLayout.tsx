@@ -12,7 +12,7 @@ interface DefaultLayoutProps {
 }
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
-  const drawerWidth = 250;
+  const drawerWidth = 300;
   const [open, setOpen] = useState<boolean>(false);
 
   const handleDrawer = () => {
@@ -22,7 +22,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <>
       <MobileDrawer mobileOpen={open} handleDrawerToggle={handleDrawer} />
-      <Drawer drawerWidth={250} />
+      <Drawer drawerWidth={drawerWidth} />
       <MainContent drawerWidth={drawerWidth}>
         <AppBar open={open} handleMenuClick={handleDrawer} />
         <Box sx={{ flexGrow: 1, paddingTop: 3 }}>{children}</Box>

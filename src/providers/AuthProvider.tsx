@@ -1,14 +1,15 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { IUser, IManager, ICustomer, AuthObj } from '../features/users';
+import { User, Customer, Manager, AuthObj } from 'features/users';
 
-type User = IManager | ICustomer;
-type LoginAsManager = ({ id, password }: AuthObj) => Promise<void>;
-type LoginAsCustomer = ({ id, password }: AuthObj) => Promise<void>;
+// type LoginAsManager = ({ id, password }: AuthObj) => Promise<void>;
+type LoginFn = ({ id, password }: AuthObj) => Promise<void>;
+type LogoutFn = () => void;
 
 interface IAuthContext {
   user: User | undefined;
-  loginAsManager: LoginAsManager;
-  loginAsCustomer: LoginAsCustomer;
+  loginAsManager: LoginFn;
+  loginAsCustomer: LoginFn;
+  logout: LogoutFn;
 }
 
 const authContext = createContext<IAuthContext>({} as IAuthContext);
@@ -22,25 +23,27 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const DUMMY_MANAGER: IManager = {
-    name: 'Alan Dsilva',
-    email: 'alan.dsilva@lemon.com',
-    role: 'manager',
-  };
-  const [user, setUser] = useState<User | undefined>(DUMMY_MANAGER);
+  const [user, setUser] = useState<User | undefined>(
+    new Manager('Alan Dsilva', 'Alan.Dsilva@lemon.com')
+  );
 
-  const loginAsManager: LoginAsManager = async ({ id, password }) => {
-    setUser({ email: id, role: 'manager' });
+  const loginAsManager: LoginFn = async ({ id, password }) => {
+    setUser(new Manager(id, password));
   };
 
-  const loginAsCustomer: LoginAsCustomer = async ({ id, password }) => {
-    setUser({ id: id, role: 'customer' });
+  const loginAsCustomer: LoginFn = async ({ id, password }) => {
+    setUser(new Customer(id, password));
+  };
+
+  const logout: LogoutFn = () => {
+    setUser(undefined);
   };
 
   const values: IAuthContext = {
     user,
     loginAsManager,
     loginAsCustomer,
+    logout,
   };
 
   return <authContext.Provider value={values}>{children}</authContext.Provider>;

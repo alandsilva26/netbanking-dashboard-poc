@@ -7,10 +7,15 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { StyledTextField } from 'components';
+
+// custom
+import { StyledTextField } from 'components/mui/styled';
 import { AppIcon } from 'components/misc/AppIcon';
+import { useAuthForm } from '../hooks/useAuthForm';
 
 export const ManagerLogin = () => {
+  const { formState, handleInputChange, handleSubmit } = useAuthForm();
+
   return (
     <>
       <Container
@@ -39,15 +44,21 @@ export const ManagerLogin = () => {
           </Typography>
           <Card variant="outlined" sx={{ borderRadius: 2 }}>
             <CardContent>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <StyledTextField
+                  name="id"
                   label="Manager Email"
                   placeholder="John.Doe@lemon.com"
+                  value={formState.id}
+                  onChange={handleInputChange}
                   fullWidth
                 />
                 <StyledTextField
+                  name="password"
                   label="Password"
                   type="password"
+                  value={formState.password}
+                  onChange={handleInputChange}
                   margin="normal"
                   fullWidth
                 />

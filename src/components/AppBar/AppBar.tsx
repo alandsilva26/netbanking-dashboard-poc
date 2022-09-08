@@ -6,7 +6,15 @@ import {
   Toolbar,
   Button,
   styled,
+  Avatar,
 } from '@mui/material';
+
+import { useAuth } from 'providers';
+
+// static
+import lemonImage from 'assets/lemon.png';
+import { FlexBox } from 'components/elements';
+import { ProfileIcon } from 'components/misc/ProfileIcon';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -31,6 +39,8 @@ export const AppBar = ({
   drawerWidth = 250,
   handleMenuClick,
 }: HeaderProps) => {
+  const auth = useAuth();
+
   return (
     <AppBarStyled color="transparent" position="relative">
       <Toolbar variant="dense" disableGutters>
@@ -41,11 +51,20 @@ export const AppBar = ({
           Open Sidebar
         </Button>
 
-        <Box sx={{ marginLeft: 'auto' }}>
-          <Button variant="text" color="error" size="small">
+        <FlexBox sx={{ marginLeft: 'auto' }}>
+          <FlexBox sx={{ alignItems: 'center' }}>
+            <ProfileIcon />
+            <Box>{auth.user?.email}</Box>
+          </FlexBox>
+          <Button
+            variant="text"
+            color="error"
+            size="small"
+            onClick={auth.logout}
+          >
             Logout
           </Button>
-        </Box>
+        </FlexBox>
       </Toolbar>
     </AppBarStyled>
   );
