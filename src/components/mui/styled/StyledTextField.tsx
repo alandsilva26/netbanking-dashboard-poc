@@ -14,6 +14,9 @@ export const StyledTextField = styled(
     marginTop: '0em',
     marginBottom: '1.5em',
   }),
+  ...(margin === 'none' && {
+    marginBottom: '0px',
+  }),
   ...(disabled === true && {
     '.MuiInputBase-root': {
       background: 'whitesmoke !important',

@@ -10,6 +10,7 @@ import {
   Button,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { MdHome } from 'react-icons/md';
 
 import { NavItem, NavItemOption } from 'components/elements';
 import { ACCOUNT_CREATE_ROUTE } from 'features/accounts';

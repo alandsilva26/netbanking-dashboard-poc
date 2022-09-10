@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardActionArea,
   CardContent,
@@ -14,18 +15,35 @@ import { FlexBox } from 'components/elements';
 import { StyledTextField } from 'components/mui/styled';
 import { Section } from './Section';
 
+const InfoItem = () => {
+  return (
+    <FlexBox sx={{ alignItems: 'center', color: 'pale' }}>
+      <Typography sx={{ fontWeight: 'bold', fontSize: '14px' }}>
+        Type:{' '}
+      </Typography>
+      <Typography>Savings</Typography>
+    </FlexBox>
+  );
+};
+
 export const ManagerDashboard = () => {
   return (
     <>
       <Section title="Account">
         <Card>
           <CardContent>
-            <StyledTextField label="Account Number" required={false} />
-            <FlexBox sx={{ alignItems: 'center' }}>
-              <Typography variant="subtitle2">Type: </Typography>
-              <Typography variant="subtitle1">Savings</Typography>
+            <FlexBox alignItems="flex-end" mb={1}>
+              <StyledTextField
+                label="Account Number"
+                required={false}
+                margin="none"
+              />
+              <Button variant="outlined" color="primary">
+                Submit
+              </Button>
             </FlexBox>
-            <Typography>Holder:</Typography>
+            <InfoItem />
+            <InfoItem />
           </CardContent>
         </Card>
       </Section>

@@ -22,7 +22,7 @@ export const NavItemStyled = styled(ListItem)(
       padding: '0.2em 1em',
       paddingLeft: '32px',
       borderRadius: 'inherit',
-      // fontSize: '14px',
+      fontSize: '14px',
       textDecoration: 'none',
       color: theme.palette.grey[800],
       ...(selected && { color: theme.palette.primary.dark }),
