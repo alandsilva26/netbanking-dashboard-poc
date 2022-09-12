@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   AppBar as MuiAppBar,
   AppBarProps as MuiAppBarProps,
   ToolbarProps,
@@ -24,7 +25,7 @@ interface AppBarProps extends MuiAppBarProps {
 export const AppBarStyled = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open' && prop !== 'drawerWidth',
 })(({ theme }) => ({
-  borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+  // borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
   padding: '0 10px',
 }));
 
@@ -44,27 +45,29 @@ export const AppBar = ({
   return (
     <AppBarStyled color="transparent" position="relative">
       <Toolbar variant="dense" disableGutters>
-        <Button
-          onClick={handleMenuClick}
-          sx={{ display: { all: 'none', sm: 'block', md: 'none' } }}
-        >
-          Open Sidebar
-        </Button>
-
-        <FlexBox sx={{ marginLeft: 'auto' }}>
-          <FlexBox sx={{ alignItems: 'center' }}>
-            <ProfileIcon />
-            <Box>{auth.user?.email}</Box>
-          </FlexBox>
+        <Container>
           <Button
+            onClick={handleMenuClick}
+            sx={{ display: { all: 'none', sm: 'block', md: 'none' } }}
+          >
+            Open Sidebar
+          </Button>
+
+          <FlexBox sx={{ marginLeft: 'auto' }}>
+            <FlexBox sx={{ alignItems: 'center' }}>
+              <ProfileIcon />
+              {/* <Box>{auth.user?.email}</Box> */}
+            </FlexBox>
+            {/* <Button
             variant="text"
             color="error"
             size="small"
             onClick={auth.logout}
           >
             Logout
-          </Button>
-        </FlexBox>
+          </Button> */}
+          </FlexBox>
+        </Container>
       </Toolbar>
     </AppBarStyled>
   );

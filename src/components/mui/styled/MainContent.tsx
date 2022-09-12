@@ -1,4 +1,5 @@
 import { Box, styled } from '@mui/material';
+import { cyan } from '@mui/material/colors';
 
 /**
  * Component to display main page content. Use this when you have a sidebar
@@ -24,4 +25,17 @@ export const MainContent = styled(Box, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+
+  // custom
+  // position: 'relative',
+  '::before': {
+    content: '""',
+    width: '100%',
+    height: '250px',
+    background: cyan[200],
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: '-1',
+  },
 }));

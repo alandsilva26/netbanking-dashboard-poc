@@ -176,57 +176,59 @@ export const DrawerContent = () => {
   };
 
   return (
-    <div>
-      {/* <AppBarStyled color="transparent" position="relative"> */}
-      <Toolbar
-        variant="dense"
-        sx={{ px: 1, borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}
-      >
-        <Brand />
-      </Toolbar>
-      {/* </AppBarStyled> */}
-      <FlexBox
-        className="drawer-custom"
-        sx={{
-          flexDirection: 'column',
-          // height: 'calc(100vh - 49px)',
-          padding: 2,
-        }}
-      >
-        <Box sx={{ display: 'none' }}>
-          <Typography
-            sx={{
-              paddingLeft: 4,
-              textTransform: 'uppercase',
-              fontWeight: '600',
-              fontColor: 'grey',
-            }}
-            variant="subtitle2"
-            gutterBottom
-          >
-            Group Title
-          </Typography>
-          <List sx={{ p: 0 }}>
-            {[
-              '/signin',
-              '/admin/signin',
-              'customers',
-              'customers/new',
-              'customers/edit',
-              'accounts',
-              ACCOUNT_CREATE_ROUTE,
-            ].map((route, index) => {
-              return (
-                <NavItemStyled key={index} selected={true}>
-                  <Link to={route}>{route}</Link>
-                </NavItemStyled>
-              );
-            })}
-          </List>
-        </Box>
+    <Box>
+      <div>
+        {/* <AppBarStyled color="transparent" position="relative"> */}
+        <Toolbar
+          variant="dense"
+          sx={{ px: 1, borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}
+        >
+          <Brand />
+        </Toolbar>
+        {/* </AppBarStyled> */}
+        <FlexBox
+          className="drawer-custom"
+          sx={{
+            flexDirection: 'column',
+            // height: 'calc(100vh - 49px)',
+            padding: 2,
+          }}
+        >
+          <Box sx={{ display: 'none' }}>
+            <Typography
+              sx={{
+                paddingLeft: 4,
+                textTransform: 'uppercase',
+                fontWeight: '600',
+                fontColor: 'grey',
+              }}
+              variant="subtitle2"
+              gutterBottom
+            >
+              Group Title
+            </Typography>
+            <List sx={{ p: 0 }}>
+              {[
+                '/signin',
+                '/admin/signin',
+                'customers',
+                'customers/new',
+                'customers/edit',
+                'accounts',
+                ACCOUNT_CREATE_ROUTE,
+              ].map((route, index) => {
+                return (
+                  <NavItemStyled key={index} selected={true}>
+                    <Link to={route}>{route}</Link>
+                  </NavItemStyled>
+                );
+              })}
+            </List>
+          </Box>
 
-        {getNavGroups()}
-      </FlexBox>
-    </div>
+          {getNavGroups()}
+        </FlexBox>
+      </div>
+    </Box>
   );
 };

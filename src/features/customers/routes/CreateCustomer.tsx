@@ -1,4 +1,10 @@
-import { Button, Container, Typography } from '@mui/material';
+import {
+  Button,
+  Card,
+  CardContent,
+  Container,
+  Typography,
+} from '@mui/material';
 
 // custome components
 import { PageLayout } from 'components/Layout';
@@ -8,7 +14,11 @@ export const CreateCustomer = () => {
   return (
     <>
       <PageLayout title="Add a new Customer">
-        <CustomerDetailsForm />
+        <Card>
+          <CardContent>
+            <CustomerDetailsForm />
+          </CardContent>
+        </Card>
       </PageLayout>
     </>
   );
