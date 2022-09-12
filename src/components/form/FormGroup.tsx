@@ -22,12 +22,12 @@ export const FormGroup = ({
             {title}
           </Typography>
           <Box
-            sx={{
-              backgroundColor: 'primary.main',
+            sx={(theme) => ({
+              backgroundColor: theme.palette.grey[400],
               opacity: '0.6',
               flexGrow: '1',
               height: '1px',
-            }}
+            })}
           ></Box>
         </FlexBox>
         {description && <Typography variant="body2">{description}</Typography>}

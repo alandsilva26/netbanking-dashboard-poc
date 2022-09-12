@@ -24,6 +24,8 @@ export const NavItemStyled = styled(ListItem)(
       borderRadius: 'inherit',
       fontSize: '14px',
       textDecoration: 'none',
+      fontWeight: '500',
+      letterSpacing: '0.8px',
       color: theme.palette.grey[800],
       ...(selected && { color: theme.palette.primary.dark }),
     },

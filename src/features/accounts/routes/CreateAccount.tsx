@@ -13,7 +13,7 @@ import {
 // custom
 import { FlexBox } from 'components/elements';
 import { FormGroup } from 'components/form';
-import { PageLayout } from 'components/Layout';
+import { ManagerPageLayout, PageLayout } from 'components/Layout';
 import { StyledTextField } from 'components/mui/styled';
 import HorizontalLinearStepper from '../components/StepperDemo';
 
@@ -31,7 +31,7 @@ export const CreateAccount = () => {
   };
 
   return (
-    <PageLayout title="Create new Bank Account">
+    <ManagerPageLayout title="Create new Bank Account">
       <form>
         <FormGroup
           title="Account Details"
@@ -140,6 +140,6 @@ export const CreateAccount = () => {
         </FormGroup>
         <Button variant="contained">Create Account</Button>
       </form>
-    </PageLayout>
+    </ManagerPageLayout>
   );
 };

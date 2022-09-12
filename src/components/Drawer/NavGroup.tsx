@@ -9,6 +9,7 @@ import {
   Box,
   Button,
 } from '@mui/material';
+import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import { Link } from 'react-router-dom';
 import { MdHome } from 'react-icons/md';
 
@@ -56,14 +57,15 @@ export const NavGroup = memo(
               },
             }}
           >
+            {/* <AppsOutlinedIcon sx={{}} fontSize="small" /> */}
             <Typography
-              sx={{
+              sx={(theme) => ({
                 textTransform: 'uppercase',
-                fontWeight: '600',
+                fontWeight: '700',
                 letterSpacing: '1px',
-                fontColor: 'grey',
+                color: theme.palette.grey[700],
                 flexGrow: 1,
-              }}
+              })}
               variant="subtitle2"
             >
               {title}

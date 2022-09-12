@@ -3,7 +3,8 @@ import { useAuth } from 'providers';
 import { homeRoute } from 'features/misc';
 import { customerListRoute, editCustomerRoute } from 'features/customers';
 import { accountListRoute } from 'features/accounts/routes';
-import { logoutRoute } from 'features/auth';
+import { changePasswordRoute, logoutRoute } from 'features/auth';
+import { fundRoutes } from 'features/funds';
 
 const ProtectedApp = () => {
   const auth = useAuth();
@@ -26,6 +27,10 @@ export const protectedRoutes: RouteObject = {
     customerListRoute,
     editCustomerRoute,
     accountListRoute,
+    ...fundRoutes,
+    // this should only be for customer
+    // protected for now
+    changePasswordRoute,
     logoutRoute,
   ],
 };

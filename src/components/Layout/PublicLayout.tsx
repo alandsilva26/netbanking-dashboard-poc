@@ -1,17 +1,30 @@
-import { AppBar, Toolbar } from '@mui/material';
-import { Brand } from 'components/AppBar';
-import { Outlet } from 'react-router-dom';
+import { Box, Container, AppBar, Toolbar } from '@mui/material';
+import { AppBarStyled, Brand } from 'components/AppBar';
+import { Link, Outlet } from 'react-router-dom';
 
 interface PublicLayoutProps {
   children: React.ReactNode;
 }
 
-export const PublicLayoutt = ({ children }: PublicLayoutProps) => {
+export const PublicLayout = ({ children }: PublicLayoutProps) => {
   return (
     <>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum esse quo
-      doloremque illo explicabo vitae optio inventore! Beatae dolorem asperiores
-      illo quam, nihil corporis nulla ad. Quos est fugit asperiores?
+      <AppBar color="transparent" variant="outlined">
+        <Toolbar variant="dense">
+          <Container
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <Brand />
+            <Box sx={{ ml: 'auto' }}>
+              <Link to="/signin">Login</Link>
+            </Box>
+          </Container>
+        </Toolbar>
+      </AppBar>
       {children}
     </>
   );

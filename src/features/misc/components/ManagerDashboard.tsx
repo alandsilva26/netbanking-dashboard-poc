@@ -1,14 +1,16 @@
 import {
+  Box,
   Button,
   Card,
   CardActionArea,
   CardContent,
+  Divider,
   Grid,
   Typography,
 } from '@mui/material';
 
 // colors
-import { lime, indigo } from '@mui/material/colors';
+import { deepPurple, lime, indigo } from '@mui/material/colors';
 
 // custom elements
 import { FlexBox } from 'components/elements';
@@ -32,31 +34,34 @@ export const ManagerDashboard = () => {
       <Section title="Account">
         <Card>
           <CardContent>
-            <FlexBox alignItems="flex-end" mb={1}>
-              <StyledTextField
-                label="Account Number"
-                required={false}
-                margin="none"
-              />
-              <Button variant="outlined" color="primary">
-                Submit
-              </Button>
+            <FlexBox sx={{}} gap={4}>
+              <Box>
+                <FlexBox alignItems="flex-end" mb={1}>
+                  <StyledTextField
+                    label="Account Number"
+                    required={false}
+                    margin="none"
+                  />
+                  <Button variant="outlined" color="primary">
+                    Submit
+                  </Button>
+                </FlexBox>
+                <InfoItem />
+              </Box>
             </FlexBox>
-            <InfoItem />
-            <InfoItem />
           </CardContent>
         </Card>
       </Section>
-      <Section title="General Actions">
+      <Section title="Quick Actions">
         <FlexBox>
-          <Card sx={{ backgroundColor: lime[200] }}>
+          <Card sx={{ color: deepPurple[900], borderColor: deepPurple[200] }}>
             <CardActionArea onClick={() => {}} sx={{ p: 1 }}>
-              <Typography>Deposit</Typography>
+              <Typography>Deposit Funds</Typography>
             </CardActionArea>
           </Card>
-          <Card sx={{ backgroundColor: indigo[200] }}>
+          <Card sx={{ color: indigo[900], borderColor: indigo[200] }}>
             <CardActionArea onClick={() => {}} sx={{ p: 1 }}>
-              <Typography>Withdrawal</Typography>
+              <Typography>Withdraw Funds</Typography>
             </CardActionArea>
           </Card>
         </FlexBox>

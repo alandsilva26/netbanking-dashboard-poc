@@ -16,6 +16,7 @@ import { ACCOUNT_CREATE_ROUTE } from 'features/accounts';
 import { NavItemStyled } from '../mui/styled/NavItemStyled';
 import { NavGroup } from './NavGroup';
 import { useAuth } from 'providers';
+import { CHANGE_PASSWORD_ROUTE } from 'features/auth';
 
 interface NavGroupOptions {
   title: string;
@@ -48,18 +49,25 @@ const CUSTOMER_GROUP_OPTIONS: NavGroupOptions[] = [
 
   {
     title: 'Accounts',
+    isOpen: true,
     items: [
       {
         to: '/accounts',
         title: 'All Accounts',
       },
+    ],
+  },
+  {
+    title: 'Settings',
+    isOpen: true,
+    items: [
       {
-        to: '/accounts/new',
-        title: 'New Account',
+        to: CHANGE_PASSWORD_ROUTE,
+        title: 'Change Password',
       },
       {
-        to: '/accounts/new',
-        title: 'New Account',
+        to: '/logout',
+        title: 'Logout',
       },
     ],
   },
@@ -168,7 +176,7 @@ export const DrawerContent = () => {
   };
 
   return (
-    <div className="drawer-custom">
+    <div>
       {/* <AppBarStyled color="transparent" position="relative"> */}
       <Toolbar
         variant="dense"
@@ -178,6 +186,7 @@ export const DrawerContent = () => {
       </Toolbar>
       {/* </AppBarStyled> */}
       <FlexBox
+        className="drawer-custom"
         sx={{
           flexDirection: 'column',
           // height: 'calc(100vh - 49px)',

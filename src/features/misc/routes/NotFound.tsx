@@ -4,10 +4,10 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 export const NotFound = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  useEffect(() => {
-    window.history.replaceState(null, '', '/404');
-  }, []);
+  // const location = useLocation();
+  // useEffect(() => {
+  //   window.history.replaceState(null, '', '/404');
+  // }, []);
 
   /**
    * Navigate to self to show 404 in url
