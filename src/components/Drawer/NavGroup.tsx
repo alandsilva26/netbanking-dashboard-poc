@@ -49,7 +49,7 @@ export const NavGroup = memo(
               marginBottom: 1,
 
               ...(open && {
-                background: 'rgb(190 190 190 / 5%)',
+                background: 'rgb(190 190 190 / 2%)',
               }),
 
               '&:hover': {
