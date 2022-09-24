@@ -11,10 +11,10 @@ import {
 } from '@mui/material';
 
 // custom
-import { FlexBox } from 'components/elements';
-import { FormGroup } from 'components/form';
-import { ManagerPageLayout, PageLayout } from 'components/Layout';
-import { StyledTextField } from 'components/mui/styled';
+import { FlexBox } from '@/components/elements';
+import { FormGroup } from '@/components/form';
+import { ManagerPageLayout, PageLayout } from '@/components/Layout';
+import { StyledTextField } from '@/components/mui/styled';
 import HorizontalLinearStepper from '../components/StepperDemo';
 
 export const CreateAccount = () => {

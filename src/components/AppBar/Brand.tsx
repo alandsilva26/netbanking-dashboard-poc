@@ -1,6 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Box, Typography, Link as MUILink } from '@mui/material';
-import { AppIcon } from 'components/misc/AppIcon';
+import { AppIcon } from '@/components/misc/AppIcon';
 
 interface BrandProps {
   title?: string;

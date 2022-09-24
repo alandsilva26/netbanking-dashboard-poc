@@ -1,5 +1,6 @@
-import { PageLayout } from 'components/Layout/PageLayout';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+
+import { PageLayout } from '@/components/Layout/PageLayout';
 
 export const CustomerList = () => {
   const columns: GridColDef[] = [

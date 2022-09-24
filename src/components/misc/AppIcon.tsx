@@ -1,5 +1,5 @@
 // assets
-import lemonImage from 'assets/lemon.png';
+import lemonImage from '@/assets/lemon.png';
 
 interface AppIconProps {
   /**

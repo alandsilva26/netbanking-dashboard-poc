@@ -13,8 +13,8 @@ import {
 import { deepPurple, lime, indigo } from '@mui/material/colors';
 
 // custom elements
-import { FlexBox } from 'components/elements';
-import { StyledTextField } from 'components/mui/styled';
+import { FlexBox } from '@/components/elements';
+import { StyledTextField } from '@/components/mui/styled';
 import { Section } from './Section';
 
 const InfoItem = () => {
@@ -55,12 +55,12 @@ export const ManagerDashboard = () => {
       <Section title="Quick Actions">
         <FlexBox>
           <Card sx={{ color: deepPurple[900], borderColor: deepPurple[200] }}>
-            <CardActionArea onClick={() => {}} sx={{ p: 1 }}>
+            <CardActionArea onClick={() => { }} sx={{ p: 1 }}>
               <Typography>Deposit Funds</Typography>
             </CardActionArea>
           </Card>
           <Card sx={{ color: indigo[900], borderColor: indigo[200] }}>
-            <CardActionArea onClick={() => {}} sx={{ p: 1 }}>
+            <CardActionArea onClick={() => { }} sx={{ p: 1 }}>
               <Typography>Withdraw Funds</Typography>
             </CardActionArea>
           </Card>

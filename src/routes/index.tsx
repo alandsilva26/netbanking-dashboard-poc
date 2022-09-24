@@ -1,14 +1,14 @@
 import { useRoutes, RouteObject, Outlet } from 'react-router-dom';
 
 // layout
-import { DefaultLayout } from 'components/Layout';
+import { DefaultLayout } from '@/components/Layout';
 
 // routes
-import { dummyRoutes } from 'features/dummy/routes';
-import { authRoutes, logoutRoute } from 'features/auth';
+import { dummyRoutes } from '@/features/dummy/routes';
+import { authRoutes, logoutRoute } from '@/features/auth';
 import { managerRoutes } from './protectedManagerRoutes';
 import { protectedRoutes } from './protectedRoutes';
-import { notFoundRoute } from 'features/misc';
+import { notFoundRoute } from '@/features/misc';
 
 const DefaultApp = () => {
   return (

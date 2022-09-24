@@ -9,10 +9,10 @@ import {
 } from '@mui/material';
 
 // custom
-import { StyledTextField } from 'components/mui/styled';
-import { AppIcon } from 'components/misc/AppIcon';
+import { StyledTextField } from '@/components/mui/styled';
+import { AppIcon } from '@/components/misc/AppIcon';
 import { useAuthForm } from '../hooks/useAuthForm';
-import { PublicLayout } from 'components/Layout';
+import { PublicLayout } from '@/components/Layout';
 
 export const ManagerLogin = () => {
   const { formState, handleInputChange, handleSubmit } = useAuthForm();

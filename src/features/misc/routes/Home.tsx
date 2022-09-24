@@ -1,10 +1,10 @@
 import { Box, List, ListItem, Typography } from '@mui/material';
-import { useAuth } from 'providers';
+import { useAuth } from '@/providers';
 import { CustomerDashboard, ManagerDashboard } from '../components';
 
 // customer components
-import { FlexBox, UnexpectedError } from 'components/elements';
-import { PageLayout } from 'components/Layout/PageLayout';
+import { FlexBox, UnexpectedError } from '@/components/elements';
+import { PageLayout } from '@/components/Layout/PageLayout';
 
 /**
  *
@@ -17,8 +17,8 @@ export const Home = () => {
     const name = user.name
       ? user.name
       : user.isCustomer()
-      ? 'Customer'
-      : 'Manager';
+        ? 'Customer'
+        : 'Manager';
 
     return (
       <PageLayout title="Dashboard">

@@ -1,8 +1,8 @@
 import { PageLayout, PageLayoutProps } from './PageLayout';
-import { Roles } from 'features/users';
+import { Roles } from '@/features/users';
 
 interface CustomerPageLayoutProps
-  extends Omit<PageLayoutProps, 'allowedRoles'> {}
+  extends Omit<PageLayoutProps, 'allowedRoles'> { }
 
 /**
  *

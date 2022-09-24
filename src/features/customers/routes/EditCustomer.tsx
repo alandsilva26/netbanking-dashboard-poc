@@ -2,9 +2,9 @@ import { Box } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 
 // custom
-import { FormGroup } from 'components/form';
-import { PageLayout } from 'components/Layout';
-import { StyledTextField } from 'components/mui/styled';
+import { FormGroup } from '@/components/form';
+import { PageLayout } from '@/components/Layout';
+import { StyledTextField } from '@/components/mui/styled';
 import { CustomerDetailsForm } from '../components';
 
 export const EditCustomer = () => {

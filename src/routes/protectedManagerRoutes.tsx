@@ -1,9 +1,9 @@
 import { RouteObject, Navigate, Outlet } from 'react-router-dom';
-import { useAuth } from 'providers';
+import { useAuth } from '@/providers';
 
 // routes
-import { createCustomerRoute } from 'features/customers';
-import { accountCreateRoute } from 'features/accounts';
+import { createCustomerRoute } from '@/features/customers';
+import { accountCreateRoute } from '@/features/accounts';
 
 const AdminApp = () => {
   const auth = useAuth();

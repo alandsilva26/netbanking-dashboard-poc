@@ -1,9 +1,9 @@
 import { Button } from '@mui/material';
 
 // custom
-import { FormGroup } from 'components/form/FormGroup';
-import { FlexBox, DatePicker } from 'components/elements';
-import { StyledTextField } from 'components/mui/styled';
+import { FormGroup } from '@/components/form/FormGroup';
+import { FlexBox, DatePicker } from '@/components/elements';
+import { StyledTextField } from '@/components/mui/styled';
 
 export const CustomerDetailsForm = () => {
   return (

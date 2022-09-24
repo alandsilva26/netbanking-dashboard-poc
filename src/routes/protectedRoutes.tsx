@@ -1,10 +1,10 @@
 import { RouteObject, Navigate, Outlet } from 'react-router-dom';
-import { useAuth } from 'providers';
-import { homeRoute } from 'features/misc';
-import { customerListRoute, editCustomerRoute } from 'features/customers';
-import { accountListRoute } from 'features/accounts/routes';
-import { changePasswordRoute, logoutRoute } from 'features/auth';
-import { fundRoutes } from 'features/funds';
+import { useAuth } from '@/providers';
+import { homeRoute } from '@/features/misc';
+import { customerListRoute, editCustomerRoute } from '@/features/customers';
+import { accountListRoute } from '@/features/accounts/routes';
+import { changePasswordRoute, logoutRoute } from '@/features/auth';
+import { fundRoutes } from '@/features/funds';
 
 const ProtectedApp = () => {
   const auth = useAuth();

@@ -3,9 +3,9 @@ import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 // custom components
-import { Drawer, MobileDrawer } from 'components/Drawer';
-import { MainContent } from 'components/mui/styled';
-import { AppBar } from 'components/AppBar';
+import { Drawer, MobileDrawer } from '@/components/Drawer';
+import { MainContent } from '@/components/mui/styled';
+import { AppBar } from '@/components/AppBar';
 
 interface DefaultLayoutProps {
   children: React.ReactNode;

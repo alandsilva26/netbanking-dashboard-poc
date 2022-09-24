@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Chip, Button } from '@mui/material';
 
-import { FlexBox } from 'components/elements';
-import { FormGroup } from 'components/form';
-import { PageLayout } from 'components/Layout';
-import { StyledTextField } from 'components/mui/styled';
+import { FlexBox } from '@/components/elements';
+import { FormGroup } from '@/components/form';
+import { PageLayout } from '@/components/Layout';
+import { StyledTextField } from '@/components/mui/styled';
 
 export const WithdrawFromAccount = () => {
   const [amount, setAmount] = useState<number>();
