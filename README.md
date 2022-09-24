@@ -1,4 +1,4 @@
-# Banking Application POC - Alan Dsilva
+# Netbanking dashboard POC - Alan Dsilva
 
 ## Features
 
