@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from 'providers';
-import { useForm } from 'hooks/useForm';
-import { AuthObj } from 'features/users';
+import { useAuth } from '@/providers';
+import { useForm } from '@/hooks/useForm';
+import { AuthObj } from '@/features/users';
 
 /**
  *

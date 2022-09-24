@@ -1,6 +1,6 @@
 import { Button, Container, Box, Typography, Divider } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { CUSTOMER_SIGNIN_ROUTE } from 'features/auth';
+import { CUSTOMER_SIGNIN_ROUTE } from '@/features/auth';
 
 export const UnexpectedError = () => {
   const navigate = useNavigate();

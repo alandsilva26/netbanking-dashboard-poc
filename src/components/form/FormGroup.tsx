@@ -1,7 +1,6 @@
 import { Box, Divider, Typography } from '@mui/material';
 
-import { FlexBox } from 'components/elements/FlexBox/FlexBox';
-import { TypePredicateKind } from 'typescript';
+import { FlexBox } from '@/components/elements/FlexBox/FlexBox';
 
 interface FormGroupProps {
   title: string;

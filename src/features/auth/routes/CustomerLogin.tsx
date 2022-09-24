@@ -8,12 +8,12 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { AppIcon } from 'components/misc/AppIcon';
+import { AppIcon } from '@/components/misc/AppIcon';
 
 // custom
-import { StyledTextField } from 'components/mui/styled';
+import { StyledTextField } from '@/components/mui/styled';
 import { useAuthForm } from '../hooks/useAuthForm';
-import { PublicLayout } from 'components/Layout';
+import { PublicLayout } from '@/components/Layout';
 
 interface CustomerLoginFormState {
   customerId: string;

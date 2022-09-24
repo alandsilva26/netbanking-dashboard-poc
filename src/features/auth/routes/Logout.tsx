@@ -1,5 +1,5 @@
 import { Container, Typography } from '@mui/material';
-import { useAuth } from 'providers';
+import { useAuth } from '@/providers';
 import { useEffect } from 'react';
 
 /**

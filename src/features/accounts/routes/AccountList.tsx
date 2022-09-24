@@ -5,7 +5,7 @@ import {
   TableCell,
   TableBody,
 } from '@mui/material';
-import { PageLayout } from 'components/Layout/PageLayout';
+import { PageLayout } from '@/components/Layout/PageLayout';
 import { IAccount } from '../types';
 
 export const AccountList = () => {

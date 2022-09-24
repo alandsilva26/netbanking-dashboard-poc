@@ -6,7 +6,7 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import { FlexBox } from 'components/elements';
+import { FlexBox } from '@/components/elements';
 import { Link } from 'react-router-dom';
 import { Section } from './Section';
 

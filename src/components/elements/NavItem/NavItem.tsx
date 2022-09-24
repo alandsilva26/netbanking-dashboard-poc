@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 
-import { NavItemStyled } from 'components/mui/styled/NavItemStyled';
-import { regExpFromArr } from 'lib';
+import { NavItemStyled } from '@/components/mui/styled/NavItemStyled';
+import { regExpFromArr } from '@/lib';
 
 interface NavItemProps {
   title?: string;

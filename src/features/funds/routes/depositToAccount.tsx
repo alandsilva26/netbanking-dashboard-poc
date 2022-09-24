@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Chip, Button } from '@mui/material';
 
-import { FlexBox } from 'components/elements';
-import { FormGroup } from 'components/form';
-import { PageLayout } from 'components/Layout';
-import { StyledTextField } from 'components/mui/styled';
-import { Roles } from 'features/users';
+import { FlexBox } from '@/components/elements';
+import { FormGroup } from '@/components/form';
+import { PageLayout } from '@/components/Layout';
+import { StyledTextField } from '@/components/mui/styled';
+import { Roles } from '@/features/users';
 
 export const DepositToAccount = () => {
   const [amount, setAmount] = useState<number>();

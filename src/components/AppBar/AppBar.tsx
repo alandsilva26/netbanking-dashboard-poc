@@ -15,13 +15,13 @@ import {
   Divider,
 } from '@mui/material';
 
-import { useAuth } from 'providers';
+import { useAuth } from '@/providers';
 
 // static
-import lemonImage from 'assets/lemon.png';
-import { FlexBox } from 'components/elements';
-import { ProfileIcon } from 'components/misc/ProfileIcon';
-import { CenteredContent } from 'components/mui/styled';
+import lemonImage from '@/assets/lemon.png';
+import { FlexBox } from '@/components/elements';
+import { ProfileIcon } from '@/components/misc/ProfileIcon';
+import { CenteredContent } from '@/components/mui/styled';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;

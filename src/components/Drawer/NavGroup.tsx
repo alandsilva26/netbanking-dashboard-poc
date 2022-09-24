@@ -13,9 +13,9 @@ import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import { Link } from 'react-router-dom';
 import { MdHome } from 'react-icons/md';
 
-import { NavItem, NavItemOption } from 'components/elements';
-import { ACCOUNT_CREATE_ROUTE } from 'features/accounts';
-import { ExpandStateIcon } from 'components/misc/ExpandStateIcon';
+import { NavItem, NavItemOption } from '@/components/elements';
+import { ACCOUNT_CREATE_ROUTE } from '@/features/accounts';
+import { ExpandStateIcon } from '@/components/misc/ExpandStateIcon';
 
 interface NavGroupProps {
   title?: string;

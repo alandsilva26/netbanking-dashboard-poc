@@ -6,7 +6,7 @@ import {
   Divider,
   Button,
 } from '@mui/material';
-import { useAuth } from 'providers';
+import { useAuth } from '@/providers';
 import { useNavigate } from 'react-router-dom';
 
 export interface PageLayoutProps extends ContainerProps {

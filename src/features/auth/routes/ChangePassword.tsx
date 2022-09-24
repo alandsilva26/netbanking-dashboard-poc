@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
-import { FlexBox } from 'components/elements';
-import { FormGroup } from 'components/form';
-import { CustomerPageLayout } from 'components/Layout';
-import { StyledTextField } from 'components/mui/styled';
+import { FlexBox } from '@/components/elements';
+import { FormGroup } from '@/components/form';
+import { CustomerPageLayout } from '@/components/Layout';
+import { StyledTextField } from '@/components/mui/styled';
 
 export const ChangePassword = () => {
   return (

@@ -1,6 +1,7 @@
 import { Box, Container, AppBar, Toolbar } from '@mui/material';
-import { AppBarStyled, Brand } from 'components/AppBar';
 import { Link, Outlet } from 'react-router-dom';
+
+import { AppBarStyled, Brand } from '@/components/AppBar';
 
 interface PublicLayoutProps {
   children: React.ReactNode;

@@ -6,8 +6,8 @@ import {
   Typography,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { FlexBox } from 'components/elements';
-import { ParentElement } from 'types';
+import { FlexBox } from '@/components/elements';
+import { ParentElement } from '@/types';
 
 interface SectionProps extends ParentElement {
   title: string;

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { User, Customer, Manager, AuthObj } from 'features/users';
+import { User, Customer, Manager, AuthObj } from '@/features/users';
 
 // type LoginAsManager = ({ id, password }: AuthObj) => Promise<void>;
 type LoginFn = ({ id, password }: AuthObj) => Promise<void>;

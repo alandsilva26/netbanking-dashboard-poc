@@ -7,16 +7,16 @@ import {
   Typography,
   Link as MuiLink,
 } from '@mui/material';
-import { AppBarStyled, Brand } from 'components/AppBar';
+import { AppBarStyled, Brand } from '@/components/AppBar';
 import { Link } from 'react-router-dom';
-import { FlexBox, NavItemOption } from 'components/elements';
+import { FlexBox, NavItemOption } from '@/components/elements';
 
 // routes
-import { ACCOUNT_CREATE_ROUTE } from 'features/accounts';
+import { ACCOUNT_CREATE_ROUTE } from '@/features/accounts';
 import { NavItemStyled } from '../mui/styled/NavItemStyled';
 import { NavGroup } from './NavGroup';
-import { useAuth } from 'providers';
-import { CHANGE_PASSWORD_ROUTE } from 'features/auth';
+import { useAuth } from '@/providers';
+import { CHANGE_PASSWORD_ROUTE } from '@/features/auth';
 
 interface NavGroupOptions {
   title: string;
