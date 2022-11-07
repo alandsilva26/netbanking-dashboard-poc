@@ -7,38 +7,40 @@ export interface AuthObj {
 }
 
 export enum Roles {
-  CUSTOMER = 'customer',
-  MANAGER = 'manager',
+  CUSTOMER = 'CUSTOMER',
+  MANAGER = 'MANAGER',
 }
 
 export class User {
+  public id?: string;
   public name?: string;
   public email: string;
   public role: Roles;
 
-  constructor(name: string, email: string, role: Roles) {
+  constructor(id: string, name: string, email: string, role: Roles) {
+    this.id = id;
     this.name = name;
     this.email = email;
     this.role = role;
   }
 
   isCustomer(): this is Customer {
-    return this instanceof Customer;
+    return this instanceof Customer || this.role === Roles.CUSTOMER;
   }
 
   isManager(): this is Manager {
-    return this instanceof Manager;
+    return this instanceof Manager || this.role === Roles.MANAGER;
   }
 }
 
 export class Manager extends User {
-  constructor(name: string, email: string) {
-    super(name, email, Roles.MANAGER);
+  constructor(id: string, name: string, email: string) {
+    super(id, name, email, Roles.MANAGER);
   }
 }
 
 export class Customer extends User {
-  constructor(name: string, email: string) {
-    super(name, email, Roles.CUSTOMER);
+  constructor(id: string, name: string, email: string) {
+    super(id, name, email, Roles.CUSTOMER);
   }
 }

@@ -2,14 +2,14 @@ import { Outlet, RouteObject } from 'react-router-dom';
 import { CustomerLogin } from './CustomerLogin';
 
 import { ManagerLogin } from './ManagerLogin';
-import { PublicLayout } from 'components/Layout';
+import { PublicLayout } from '@/components/Layout';
 
 // routes
-import { homeRoute } from 'features/misc';
+import { homeRoute } from '@/features/misc';
 import { Logout } from './Logout';
 import { ChangePassword } from './ChangePassword';
 
-const AlreadyAuthenticatedApp = () => {};
+const AlreadyAuthenticatedApp = () => { };
 
 export const CUSTOMER_SIGNIN_ROUTE = '/signin';
 export const ADMIN_SIGNIN_ROUTE = '/admin/signin';

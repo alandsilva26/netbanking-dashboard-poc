@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { User, Customer, Manager, AuthObj } from '@/features/users';
+import { getProfile } from '@/features/users/api/getProfile';
 
 // type LoginAsManager = ({ id, password }: AuthObj) => Promise<void>;
 type LoginFn = ({ id, password }: AuthObj) => Promise<void>;
@@ -23,16 +24,15 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [user, setUser] = useState<User | undefined>(
-    new Manager('Alan Dsilva', 'Alan.Dsilva@lemon.com')
-  );
+  const [loading, setLoading] = useState<boolean>(true);
+  const [user, setUser] = useState<User | undefined>();
 
   const loginAsManager: LoginFn = async ({ id, password }) => {
-    setUser(new Manager(id, password));
+    // setUser(new Manager(id, password));
   };
 
   const loginAsCustomer: LoginFn = async ({ id, password }) => {
-    setUser(new Customer(id, password));
+    // setUser(new Customer(id, password));
   };
 
   const logout: LogoutFn = () => {
@@ -46,5 +46,23 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     logout,
   };
 
-  return <authContext.Provider value={values}>{children}</authContext.Provider>;
+  const fetchProfile = async () => {
+    try {
+      const user = await getProfile();
+      const userObj = new User(user.id!, user.name!, user.email, user.role);
+      console.log(userObj);
+      setUser(userObj);
+    } catch (err) {
+      console.log(err);
+    }
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    fetchProfile();
+  }, []);
+
+  return <authContext.Provider value={values}>{
+    loading ? <>Loading............</> : children
+  }</authContext.Provider>;
 };

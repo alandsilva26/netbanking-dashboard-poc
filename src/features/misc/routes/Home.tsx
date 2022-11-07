@@ -23,7 +23,7 @@ export const Home = () => {
     return (
       <PageLayout title="Dashboard">
         <Typography gutterBottom mb={3}>
-          Welcome {name}
+          Welcome {name} to {user.role} dashboard
         </Typography>
         <Box>
           {/* <CustomerDashboard /> */}
